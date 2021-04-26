@@ -1,7 +1,6 @@
 # Wikipedia-Search-Engine
 
-
-It is a search-engine that is designed based on Block sort based indexing and further uses relevance ranking based on the tf-idf scores* of the documents in the Wikipedia Dump.
+It is a search-engine that is designed based on Block sort based indexing and further uses relevance ranking based on the tf-idf scores of the documents in the Wikipedia Dump.
 
 Install Pystemmer which is a Python interface to the stemming algorithms from the Snowball project (http://snowball.tartarus.org/).
 
