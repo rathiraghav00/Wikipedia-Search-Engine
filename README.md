@@ -9,6 +9,8 @@ Install Pystemmer which is a Python interface to the stemming algorithms from th
 * indexer1.py : https://colab.research.google.com/drive/1brLTLdmD6oYKEdttJy7y1c-lNaFaGQNK?usp=sharing
 * indexer2.py : https://colab.research.google.com/drive/1XqQIqQC1dVCAVMrOenc0qLdVZHgrjz3m
 
+![alt text](Output.png?raw=true)
+
 Wikipedia dump file link : https://dumps.wikimedia.org/enwiki/latest/
 
 Wikipedia dump file link used in this project : https://dumps.wikimedia.org/enwiki/latest/enwiki-latest-pages-articles1.xml-p1p41242.bz2
