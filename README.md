@@ -4,9 +4,11 @@ It is a search-engine that is designed based on Block sort based indexing and fu
 
 Install Pystemmer which is a Python interface to the stemming algorithms from the Snowball project (http://snowball.tartarus.org/).
 
+<!--- 
 * query.py : https://colab.research.google.com/drive/1BiW2GQxuTdus5CYwj2eYbbEQXM90G41F?usp=sharing
 * indexer1.py : https://colab.research.google.com/drive/1brLTLdmD6oYKEdttJy7y1c-lNaFaGQNK?usp=sharing
 * indexer2.py : https://colab.research.google.com/drive/1XqQIqQC1dVCAVMrOenc0qLdVZHgrjz3m
+--->
 
 ![alt text](Output.png?raw=true)
 
