@@ -30,8 +30,6 @@ def writeit(tag, data):
             doc = s[0]
             cnt = s[1]
 
-            # Check why we add a +1
-            # Probably wrong
             tfidf = (1 + math.log10(float(cnt))) * idf
 
             tfidf = "%.2f" % tfidf

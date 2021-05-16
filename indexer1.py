@@ -110,7 +110,7 @@ def update(s, tag):
                         text_cnt_dic[word] = 1
 
 
-# done
+
 def category_updater(text):
     rex = re.findall("\[\[Category:(.*?)\]\]", str(text))
     if rex:
@@ -131,7 +131,7 @@ def category_updater(text):
                         category_cnt_dic[word] = 1
 
 
-# done
+
 def infobox_updater(s):
     tempword = re.findall(
         "{{Infobox((.|\n)*?)}}", str(s)
@@ -168,27 +168,17 @@ for i in range(len(XML_file_names)):
         tag = element.tag
         # print(tag)
 
-        # Check this out!!????
+       
         # it is a namespace actually, and we use namespaces because for eg if we have a field ID both in
         # as well as teacher class then we use a namespace like a link in XML. But we need the end portion after that namespace
         tag = tag[tag.rfind("}") + 1 :]  # namespace
 
-        #         original {http://www.mediawiki.org/xml/export-0.10/}mediawiki
-        # after r.find mediawiki
-        # original {http://www.mediawiki.org/xml/export-0.10/}siteinfo
-        # after r.find siteinfo
-        # original {http://www.mediawiki.org/xml/export-0.10/}sitename
-        # after r.find sitename
-        # original {http://www.mediawiki.org/xml/export-0.10/}sitename
-        # after r.find sitename
-        # original {http://www.mediawiki.org/xml/export-0.10/}dbname
-        # after r.find dbname
-        # original {http://www.mediawiki.org/xml/export-0.10/}dbname
-
         if tag == "page" and event == "end":  # one page at a time
 
             for w in words_dic:
+
                 # w = remove_special_characters(w)
+
                 for t in tags:
                     if t == "title":
                         if w in title_cnt_dic:
@@ -220,13 +210,16 @@ for i in range(len(XML_file_names)):
             words_dic.clear()
 
         elif tag == "title" and event == "end":
+
             text = element.text
             text.strip()
             text.replace(" ", "_")
             text = re.sub("\s+", "_", text.strip())
             doc_titles.write(str(text) + "\n")
             update(str(text), tag)
+
         elif tag == "text" and event == "end":
+
             text = str(element.text)
             text = regExp1.sub("", text)
             text = regExp2.sub("", text)
@@ -300,7 +293,7 @@ for i in range(len(XML_file_names)):
             file_no += 1
 
 
-# since the number of documents may not be a multiple of 20000 so I need to write one more if statement like above
+# Since the number of documents may not be a multiple of 20000 
 if doc_cnt > 0:
     print(doc_cnt)
     doc_cnt = 0
