@@ -104,7 +104,7 @@ def update(s, tag):
                     else:
                         title_cnt_dic[word] = 1
                 elif tag == "text":
-                    if word in infobox_cnt_dic:
+                    if word in text_cnt_dic:
                         text_cnt_dic[word] += 1
                     else:
                         text_cnt_dic[word] = 1
